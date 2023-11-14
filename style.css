@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+.wraper {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[class*="dice-block-"] {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(128, 128, 128, 0.15);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.row {
+    height: 33.3333%;
+    display: flex;
+    align-items: center;
+}
+
+[class*="point-"] {
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.dice-block-1 {
+    justify-content: center;
+    align-items: center;
+}
+
+.dice-block-2 .row:last-child, .dice-block-3 .row:last-child {
+    justify-content: flex-end;
+}
+
+.dice-block-3 .row:nth-child(2), .dice-block-5 .row:nth-child(2) {
+    justify-content: center;
+}
+
+.dice-block-4 .row:nth-child(odd), .dice-block-5 .row:nth-child(odd), .dice-block-6 .row:nth-child(odd), .dice-block-6 .row:nth-child(even) {
+    justify-content: space-between;
+}
